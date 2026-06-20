@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Dự báo doanh số bán hàng</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>📈 Dự báo doanh số bán hàng</h1>
+    <p class="subtitle">Mô hình Exponential Smoothing (Pretrained)</p>
+
+    <div class="card">
+        <label>📂 Chọn file CSV</label>
+        <input type="file" id="fileInput">
+
+        <label>📅 Số kỳ dự báo</label>
+        <input type="number" id="periods" value="12" min="1">
+
+        <button onclick="uploadFile()">🚀 Dự đoán</button>
+    </div>
+
+    <div class="card result">
+        <h2>Kết quả dự báo</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Kỳ</th>
+                    <th>Doanh số dự báo</th>
+                </tr>
+            </thead>
+            <tbody id="forecastTable"></tbody>
+        </table>
+
+        <img id="chart">
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
